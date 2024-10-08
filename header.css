@@ -1,0 +1,64 @@
+/* In header.css */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Apple's header background color */
+    backdrop-filter: saturate(180%) blur(20px); /* Adds the blur effect */
+    color: #ffffff;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    height: 44px; /* Apple's header height */
+}
+
+.main-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: #424245; /* Apple's separator line color */
+}
+
+.main-header.hidden {
+    transform: translateY(-100%);
+}
+
+.left-container, .right-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 44px; /* Adjust based on your logo size */
+    padding: 0 10px;
+}
+
+/* Ensure the last logo doesn't have a right margin */
+.left-container .logo:last-of-type {
+    margin-right: 0;
+}
+
+/* Add this new style for the hamburger menu within the right container */
+.right-container .menu-toggle {
+    position: static; /* Override the fixed positioning */
+    top: auto;
+    right: auto;
+    margin-left: 10px; /* Add some space between the last logo and the hamburger icon */
+}
+
+/* Adjust the main content to account for the fixed header */
+main {
+    padding-top: 60px; /* Adjust this value based on your header height */
+}
