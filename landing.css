@@ -20,7 +20,7 @@ body {
 h1 {
     font-size: 56px;
     font-weight: 600;
-    line-height: 1.07143;
+    line-height: 1.57143;
     letter-spacing: -.005em;
     background: linear-gradient(180deg, #fbfbfd 0%, #8e8e93 100%);
     -webkit-background-clip: text;
@@ -28,6 +28,7 @@ h1 {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    margin: 10px;
 }
 
 p {
@@ -45,4 +46,16 @@ p {
 .visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+#new-sub-heading-1, #new-sub-heading-2 {
+    font-size: 28px;
+    line-height: 1.10722;
+    font-weight: 400;
+    letter-spacing: .004em;
+    color: #a1a1a6;
+    margin-top: 6px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
 }

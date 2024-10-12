@@ -12,10 +12,10 @@
         }
     </style>
     <link rel="stylesheet" href="hamburger.css">
-    <link rel="stylesheet" href="globe.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="landing.css">
-</head>
+    <link rel="stylesheet" href="background-globe.css">
+    <link rel="stylesheet" href="custom-styles.css">
 <body>
     <header class="main-header">
         <div class="left-container">
@@ -47,9 +47,18 @@
     <div class="landing-content">
         <h1 id="main-heading">The World of Enterprise Computing Technologies</h1>
         <p id="sub-heading">Pioneered by IBM represented in the IUE as IBM Z</p>
+        <p id="new-sub-heading-1" style="display: none;">New subtext for second scroll</p>
+        <p id="new-sub-heading-2" style="display: none;">New subtext for third scroll</p>
     </div>
-
+    <div id="globe-container">
+        <canvas id="globeCanvas"></canvas>
+    </div>
+    <div id="glassOverlay"></div>
+    <div id="globe-container"></div>
     <script src="hamburger.js"></script>
     <script src="landing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="background-globe.js"></script>
+    <script src="scroll-effect.js"></script>
 </body>
 </html>
