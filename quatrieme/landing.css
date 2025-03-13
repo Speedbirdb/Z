@@ -1,0 +1,164 @@
+/* landing.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.landing-content {
+    container-type: inline-size;
+    container-name: landing;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Base styles with fluid typography */
+h1 {
+    font-size: clamp(32px, calc(32px + (48 - 32) * ((100vw - 320px) / (768 - 320))), 48px);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -.005em;
+    background: linear-gradient(180deg, #fbfbfd 0%, #8e8e93 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+p {
+    font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / (768 - 320))), 24px);
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: .004em;
+    color: #a1a1a6;
+    margin-top: 6px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#new-sub-heading-1, #new-sub-heading-2 {
+    font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 320px) / (768 - 320))), 24px);
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: .004em;
+    color: #a1a1a6;
+    margin-top: 6px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Aspect ratio based text wrapping */
+@container (max-aspect-ratio: 3/4) {  /* Only start breaking when significantly taller than wide */
+    h1 {
+        max-width: 85%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    p, #new-sub-heading-1, #new-sub-heading-2 {
+        max-width: 80%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+@container (max-aspect-ratio: 2/3) {
+    h1 {
+        max-width: 75%;
+    }
+    
+    p, #new-sub-heading-1, #new-sub-heading-2 {
+        max-width: 70%;
+    }
+}
+
+@container (max-aspect-ratio: 1/2) {
+    h1 {
+        max-width: 65%;
+    }
+    
+    p, #new-sub-heading-1, #new-sub-heading-2 {
+        max-width: 60%;
+    }
+}
+
+/* These are the media queries but dunno ever need to update, also dont know what the life is gonna get... */
+@media screen and (max-aspect-ratio: 3/4) {
+    h1 {
+        max-width: 85%;
+    }
+    
+    p, #new-sub-heading-1, #new-sub-heading-2 {
+        max-width: 80%;
+    }
+
+    #new-sub-heading-1 {
+        text-align: left;
+    }
+}
+
+@media screen and (max-aspect-ratio: 2/3) {
+    h1 {
+        max-width: 75%;
+    }
+    
+    p, #new-sub-heading-1, #new-sub-heading-2 {
+        max-width: 70%;
+    }
+
+    #new-sub-heading-1 {
+        text-align: left;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/2) {
+    h1 {
+        max-width: 65%;
+    }
+    
+    p, #new-sub-heading-1, #new-sub-heading-2 {
+        max-width: 60%;
+    }
+
+    #new-sub-heading-1 {
+        text-align: left;
+    }
+}
+
+

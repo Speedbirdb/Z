@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBMZ Club IUE Chapter - Applications</title>
+    <style>
+        body{
+            background-color: #000000;
+            margin:0;
+            padding:0;
+            overflow-x: hidden;
+        }
+    
+        .hexagon {
+            position: absolute;
+            background: rgba(0, 45, 156, 0.25);
+            border: 2px solid rgba(0, 90, 255, 0.4);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            touch-action: manipulation;
+        }
+
+        @media (max-width: 768px) {
+            .hexagon {
+                border-width: 1px;
+                transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .hexagon:active {
+                transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="hamburger.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="custom-styles.css">
+    <link rel="stylesheet" href="glass-rectangles.css">
+    <link rel="stylesheet" href="button.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header class="main-header">
+        <div class="left-container">
+            <a href="https://www.ibm.com/z" target="_blank" rel="noopener noreferrer">
+                <img class="logo" src="1725975585019smaller.png" alt="Logo 1">
+            </a>
+            <a href="https://www.ibmziue.com/" target="_blank" rel="noopener noreferrer">
+                <img class="logo" src="Samplexxsmaller.png" alt="Logo 2">
+            </a>
+        </div>
+        <div class="right-container">
+        </div>
+    </header>
+
+    <div class="glass-container">
+        <div class="glass-rectangle rect1">
+            <div class="rectangle-content">
+                <h2 class="rectangle-heading">Executive Board</h2>
+                <div class="google-form-container">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSd3o6JUbBcxc_KZ-wesmJutTDtZL2HSS0wUXqAobMtcepgfnQ/viewform?embedded=true" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                        Loading…
+                    </iframe>
+                </div>
+            </div>
+        </div>        
+        <div class="glass-rectangle rect2">
+            <div class="rectangle-content">
+                <h2 class="rectangle-heading">General Member</h2>
+                <a href="https://club.ieu.edu.tr/ogrenci-kulupleri" 
+                    class="shiny-cta" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                 <span>Join Us</span>
+             </a>
+             
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" id="hamburger">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="versionfinale.html">Home</a></li>
+            <li><a href="news.html">Newsletter</a></li>
+            <li><a href="applications.html" class="active">Applications</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/company/ibm-z-club-iue-chapter/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+            <li><a href="https://github.com/ibmziue" target="_blank" rel="noopener noreferrer">Github</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hexagon Background -->
+    <div class="hexagon-background" id="hexBackground"></div>
+
+    <!-- Application Content -->
+    <div class="landing-content">
+        <h1 id="main-heading">Join IBMZ Club IUE Chapter</h1>
+        <div class="application-buttons" style="margin-top: 2rem;">
+            <a href="YOUR_MEMBER_FORM_URL" class="apply-button" target="_blank" rel="noopener noreferrer">
+                
+            </a>
+            <a href="YOUR_EXECUTIVE_FORM_URL" class="apply-button" target="_blank" rel="noopener noreferrer">
+                
+            </a>
+        </div>
+    </div>
+
+    <div id="glassOverlay"></div>
+
+    <script src="hamburger.js"></script>
+    <script src="hexBackground.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        initHexBackground();
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: #000;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#globeCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hud-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border: 2px solid rgba(0, 255, 0, 0.3);
+}
+
+.hud-crosshair {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 255, 0, 0.5);
+    border-radius: 50%;
+}
+
+.hud-crosshair::before,
+.hud-crosshair::after {
+    content: '';
+    position: absolute;
+    background: rgba(0, 255, 0, 0.5);
+}
+
+.hud-crosshair::before {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+}
+
+.hud-crosshair::after {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+}
+
+.hud-info {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: #00ff00;
+    font-size: 14px;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    line-height: 1.5;
+}
+
+.scan-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        transparent 50%, 
+        rgba(0, 255, 0, 0.02) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    animation: scanline 10s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
